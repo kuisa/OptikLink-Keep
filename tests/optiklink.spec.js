@@ -353,6 +353,8 @@ test('OptikLink 保活', async ({ }, testInfo) => {
             throw new Error(`❌ 未到达 OptikLink，当前 URL: ${page.url()}`);
         }
         console.log(`✅ 登录成功！当前：${page.url()}`);
+        await sendTG('✅ 保活成功！', email);
+        process.exit()
 
         console.log('📤 点击 Login to Panel...');
         await page.click('a[data-target="#logintopanel"]');
