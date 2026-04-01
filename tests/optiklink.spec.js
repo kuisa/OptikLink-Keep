@@ -349,7 +349,7 @@ test('OptikLink 保活', async ({ }, testInfo) => {
             await page.waitForURL(/optiklink\.net/, { timeout: 30000 });
         } catch { /* 可能已经在页面 */ }
 
-        if (!page.url().includes('optiklink.net') or page.url().includes('error')) {
+        if (!page.url().includes('optiklink.net')) {
             throw new Error(`❌ 未到达 OptikLink，当前 URL: ${page.url()}`);
         }
         console.log(`✅ 登录成功！当前：${page.url()}`);
