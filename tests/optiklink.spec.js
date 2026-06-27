@@ -355,7 +355,7 @@ test('OptikLink 保活', async ({ }, testInfo) => {
         }
         console.log(`✅ 登录成功！当前：${page.url()}`);
         await sendTG('✅ 保活成功！', email);
-        console.log('🏁 完成任务，退出测试');
+        console.log('🏁 完成任务，退出脚本');
         return;
 
     } catch (e) {
